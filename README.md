@@ -7,15 +7,19 @@ Assuming the role of a security analyst for the fictional company 'Credico Inc' 
 
 **sudo tar xvvf TardDocs.tar**
 
-
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2ac757055a1c93e8cece1a0794b2ddb0588c6f8f/Images/step%201%201.jpg)
 
 2. Command to create the Javaless_Doc.tar archive from the TarDocs/ directory, while excluding the TarDocs/Documents/Java directory:
 
 **Tar -cvf Javaless_Doc.tar --exclude=”TarDocs/Documents/Java” TarDocs/**
 
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%201%202.jpg)
+
 3. Command to ensure Java/ is not in the new Javaless_Docs.tar archive: 
 
 **sudo tar tf Javaless_Doc.tar | grep "Java"**
+
+![name-of-you-image](
 
 **Critical Analysis Question**
 
@@ -29,11 +33,15 @@ X means to extract and c means to create. X would be used to extract data, like 
 
 **0 6 * * 3 tar cvfz ~/Documents/Projects/auth_backup.tar.gz var/log/auth.log**
 
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/Step%202%201.jpg)
+
 # Step 3: Write Basic Bash Scripts
 
 1. Brace expansion command to create the four subdirectories:
 
 **sudo mkdir ~/backups/{freemem,diskuse,openlist,freedisk}**
+
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%203%201.jpg)
 
 *I later noticed the spelling mistake for ‘freedisk’ and renamed the directory*
 Paste your system.sh script edits below:
@@ -48,13 +56,21 @@ Paste your system.sh script edits below:
 
 **df -h / > ~/backups/freedisk/free_disk.txt**
 
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%203%202.jpg)
+
 3. Command to make the system.sh script executable: 
 
 **chmod 744 system.sh**
 
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%203%203.jpg)
+
 **Optional**
 
-1. Commands to test the script and confirm its execution: sudo ./system.sh
+1. Commands to test the script and confirm its execution: 
+
+**sudo ./system.sh**
+
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/optional.jpg)
 
 # Step 4. Manage Log File Sizes
 
@@ -71,3 +87,8 @@ Configure a log rotation scheme that backs up authentication messages to the /va
     delaycompress
     missingok
 }  
+
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%204a.jpg)
+
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%204b.png)
+
