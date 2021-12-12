@@ -19,7 +19,7 @@ Assuming the role of a security analyst for the fictional company 'Credico Inc' 
 
 **sudo tar tf Javaless_Doc.tar | grep "Java"**
 
-![name-of-you-image](
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/0c00015d3f4fb244f584be1c45cbf133b89e9f94/Images/step%201%203.jpg)
 
 **Critical Analysis Question**
 
