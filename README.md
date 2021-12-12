@@ -1,2 +1,64 @@
 # Archiving_and_Logging_Data
 Assuming the role of a security analyst for the fictional company 'Credico Inc' to archive and log data
+
+# Step 1: Create, Extract, Compress, and Manage tar Backup Archives
+
+1. Command to extract the TarDocs.tar archive to the current directory:
+
+**sudo tar xvvf TardDocs.tar**
+
+2. Command to create the Javaless_Doc.tar archive from the TarDocs/ directory, while excluding the TarDocs/Documents/Java directory:
+
+**Tar -cvf Javaless_Doc.tar --exclude=”TarDocs/Documents/Java” TarDocs/**
+
+3. Command to ensure Java/ is not in the new Javaless_Docs.tar archive: 
+
+**sudo tar tf Javaless_Doc.tar | grep "Java"**
+
+**Critical Analysis Question**
+
+Why wouldn't you use the options -x and -c at the same time with tar?
+
+X means to extract and c means to create. X would be used to extract data, like untar, while c would be used to create an archive. These two options within a command would cancel each other out and the command would not work. Once the tar is created it would just extract everything, making the command pointless.
+
+# Step 2: Create, Manage, and Automate Cron Jobs
+
+1. Cron job for backing up the /var/log/auth.log file:
+
+**0 6 * * 3 tar cvfz ~/Documents/Projects/auth_backup.tar.gz var/log/auth.log**
+
+# Step 3: Write Basic Bash Scripts
+
+1. Brace expansion command to create the four subdirectories:
+
+**sudo mkdir ~/backups/{freemem,diskuse,openlist,freedisk}**
+
+*I later noticed the spelling mistake for ‘freedisk’ and renamed the directory*
+Paste your system.sh script edits below:
+
+ #!/bin/bash
+free -lh > ~/backups/freemem/free_mem.txt
+df -h > ~/backups/diskuse/disk_usage.txt
+lsof > ~/backups/openlist/open_list.txt
+df -h / > ~/backups/freedisk/free_disk.txt
+
+Command to make the system.sh script executable: chmod 744 system.sh
+
+Optional
+Commands to test the script and confirm its execution: sudo ./system.sh
+
+
+Step 4. Manage Log File Sizes
+Run sudo nano /etc/logrotate.conf to edit the logrotate configuration file.
+
+ Configure a log rotation scheme that backs up authentication messages to the /var/log/auth.log.
+
+
+Add your config file edits below:
+/var/log/auth.log {
+    weekly
+    rotate 7
+    notifempty
+    delaycompress
+    missingok
+}  
