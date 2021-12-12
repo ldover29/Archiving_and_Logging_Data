@@ -80,13 +80,7 @@ Configure a log rotation scheme that backs up authentication messages to the /va
 
 - Add your config file edits below:
 
-/var/log/auth.log {
-    weekly 
-    rotate 7
-    notifempty
-    delaycompress
-    missingok
-}  
+![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/e023b60543625a050d1359611f1be8883db443a8/Images/config%20file%20var.png)
 
 ![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%204a.jpg)
 
