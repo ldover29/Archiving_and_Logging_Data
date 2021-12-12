@@ -36,11 +36,12 @@ X means to extract and c means to create. X would be used to extract data, like 
 *I later noticed the spelling mistake for ‘freedisk’ and renamed the directory*
 Paste your system.sh script edits below:
 
- #!/bin/bash
-free -lh > ~/backups/freemem/free_mem.txt
-df -h > ~/backups/diskuse/disk_usage.txt
-lsof > ~/backups/openlist/open_list.txt
-df -h / > ~/backups/freedisk/free_disk.txt
+#!/bin/bash
+
+**free -lh > ~/backups/freemem/free_mem.txt**
+**df -h > ~/backups/diskuse/disk_usage.txt**
+**lsof > ~/backups/openlist/open_list.txt**
+**df -h / > ~/backups/freedisk/free_disk.txt**
 
 Command to make the system.sh script executable: chmod 744 system.sh
 
