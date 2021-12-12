@@ -7,6 +7,8 @@ Assuming the role of a security analyst for the fictional company 'Credico Inc' 
 
 **sudo tar xvvf TardDocs.tar**
 
+
+
 2. Command to create the Javaless_Doc.tar archive from the TarDocs/ directory, while excluding the TarDocs/Documents/Java directory:
 
 **Tar -cvf Javaless_Doc.tar --exclude=”TarDocs/Documents/Java” TarDocs/**
