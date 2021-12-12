@@ -46,8 +46,7 @@ X means to extract and c means to create. X would be used to extract data, like 
 *I later noticed the spelling mistake for ‘freedisk’ and renamed the directory*
 Paste your system.sh script edits below:
 
-2.
-#!/bin/bash
+2. #!/bin/bash
 
 **free -lh > ~/backups/freemem/free_mem.txt**
 
