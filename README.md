@@ -44,6 +44,7 @@ X means to extract and c means to create. X would be used to extract data, like 
 ![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2edf9ef2e62fb2d623abfad43ca5ba4ade85228c/Images/step%203%201.jpg)
 
 *I later noticed the spelling mistake for ‘freedisk’ and renamed the directory*
+
 Paste your system.sh script edits below:
 
 2. #!/bin/bash
