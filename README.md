@@ -38,24 +38,30 @@ Paste your system.sh script edits below:
 
 #!/bin/bash
 
-**free -lh > ~/backups/freemem/free_mem.txt**
+**2. free -lh > ~/backups/freemem/free_mem.txt**
+
 **df -h > ~/backups/diskuse/disk_usage.txt**
+
 **lsof > ~/backups/openlist/open_list.txt**
+
 **df -h / > ~/backups/freedisk/free_disk.txt**
 
-Command to make the system.sh script executable: chmod 744 system.sh
+3. Command to make the system.sh script executable: 
 
-Optional
-Commands to test the script and confirm its execution: sudo ./system.sh
+**chmod 744 system.sh**
 
+**Optional**
 
-Step 4. Manage Log File Sizes
-Run sudo nano /etc/logrotate.conf to edit the logrotate configuration file.
+1. Commands to test the script and confirm its execution: sudo ./system.sh
 
- Configure a log rotation scheme that backs up authentication messages to the /var/log/auth.log.
+# Step 4. Manage Log File Sizes
 
+1. Run sudo nano /etc/logrotate.conf to edit the logrotate configuration file.
 
-Add your config file edits below:
+Configure a log rotation scheme that backs up authentication messages to the /var/log/auth.log.
+
+- Add your config file edits below:
+
 /var/log/auth.log {
     weekly
     rotate 7
