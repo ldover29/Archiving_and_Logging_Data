@@ -63,9 +63,14 @@ Configure a log rotation scheme that backs up authentication messages to the /va
 - Add your config file edits below:
 
 /var/log/auth.log {
+    
     weekly
+    
     rotate 7
+    
     notifempty
+    
     delaycompress
+    
     missingok
 }  
