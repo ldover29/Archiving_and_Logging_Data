@@ -5,7 +5,7 @@ Assuming the role of a security analyst for the fictional company 'Credico Inc' 
 
 1. Command to extract the TarDocs.tar archive to the current directory:
 
-**sudo tar xvvf TardDocs.tar**
+**sudo tar xvvf TarDocs.tar**
 
 ![name-of-you-image](https://github.com/ldover29/Archiving_and_Logging_Data/blob/2ac757055a1c93e8cece1a0794b2ddb0588c6f8f/Images/step%201%201.jpg)
 
